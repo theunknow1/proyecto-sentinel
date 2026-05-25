@@ -138,4 +138,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     startScanBtn.addEventListener('click', startScanner);
     stopScanBtn.addEventListener('click', stopScanner);
+  
+    // Imprimir Código QR
+    const printQrBtn = document.getElementById('printQrBtn');
+    if (printQrBtn) {
+        printQrBtn.addEventListener('click', () => {
+            window.print();
+        });
+    }
 });
