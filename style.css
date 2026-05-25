@@ -267,3 +267,28 @@ header p {
     text-align: center;
     font-weight: 600;
 }
+
+/* Estilos de Impresión */
+@media print {
+    body {
+        background: white;
+    }
+    body * {
+        visibility: hidden;
+    }
+    #qrResult, #qrResult * {
+        visibility: visible;
+        color: black;
+    }
+    #qrResult {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        border: none;
+    }
+    #printQrBtn, .tabs, header, .background-shapes, .qr-hint {
+        display: none !important;
+    }
+}
